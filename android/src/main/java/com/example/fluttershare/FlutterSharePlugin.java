@@ -125,6 +125,7 @@ public class FlutterSharePlugin implements MethodCallHandler {
             intent.putExtra(Intent.EXTRA_TEXT, text);
             intent.putExtra(Intent.EXTRA_STREAM, fileUri);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
 
             Intent chooserIntent = Intent.createChooser(intent, chooserTitle);
             chooserIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
